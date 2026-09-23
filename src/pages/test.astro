@@ -15,18 +15,9 @@ import '../layouts/style.css';
     <div>
         <ul>
             {allDevlogs.map(log => (
-                    <li><a href={`./src/content/devlogs/${log.id}`}>{log.data.title}</a></li>
-                    <li><a href={'./src/content/devlogs/devlog-01.md'}>test</a></li>
+                    <li><a href={`/allDevlogs/${log.id}`}>{log.data.title}</a></li>
             ))}
         </ul>
-    </div>
-    <div>
-        <h1>
-        </h1>
-    </div>
-    <div>
-        <h1>
-        </h1>
     </div>
 </body>
 
