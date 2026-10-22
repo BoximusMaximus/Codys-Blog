@@ -1,14 +1,11 @@
----
----
-<style>
-    footer {
-        display: flex;
-        justify-content: center;
-    }
-</style>
-<footer>
-
-    <p>You can find the GitHub Repo for this website
-        <a href="https://github.com/BoximusMaximus/PortfolioWebsite" target="_blank">here</a>
-    </p>
+<footer class="flex flex-col gap-3 border-t border-white/10 py-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+  <p>&copy; {new Date().getFullYear()} Christaphor Box</p>
+  <a
+    href="https://github.com/BoximusMaximus/PortfolioWebsite"
+    target="_blank"
+    rel="noreferrer"
+    class="w-fit font-medium text-zinc-400 transition hover:text-emerald-300"
+  >
+    View this site on GitHub <span aria-hidden="true">↗</span>
+  </a>
 </footer>

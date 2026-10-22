@@ -1,19 +1,51 @@
 ---
-import '../layouts/style.css';
-import Navigation from "../components/Navigation.astro";
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<head>
-    <meta charset="UTF-8">
-    <title>About Me</title>
-</head>
-<body>
 
-<Navigation />
-
-<hr>
-
-<div>
-    <p>This is About me!</p>
-</div>
-</body>
+<BaseLayout title="About — Christaphor Box" description="Learn more about Christaphor Box.">
+  <section class="mx-auto max-w-3xl">
+    <div class="flex flex-col justify-center items-center-safe">
+      <div>
+        <p class="align-self-top text-zinc-400">[Picture coming soon]</p>
+      </div>
+      
+      <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl place-self-center-safe">Hello, call me Cody.</h1>
+    </div>
+    <div class="grid justify-center gap-5 md:grid-cols-3">
+      <a href="https://www.linkedin.com/in/christaphorbox" target="blank" class="flex justify-center items-center-safe mt-3 gap-4 group rounded-xl border border-white/10 bg-zinc-9 p-3 transition hover:-translate-y-0.25 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/3840px-LinkedIn_icon.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Linkedin Logo" width="40">
+        <h2 class=" ddtext-xl leading-6 text-zinc-400">Linkedin</h2>
+      </a>
+      <a href="https://github.com/BoximusMaximus" target="blank" class="flex justify-center items-center-safe mt-3 gap-4 group rounded-xl border border-white/10 bg-zinc-9 p-3 transition hover:-translate-y-0.25 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="Github Logo" width="40">
+        <h2 class=" ddtext-xl leading-6 text-zinc-400">Github</h2>
+      </a>
+      <a href="https://www.youtube.com/@christaphorbox" target="blank" class="flex justify-center items-center-safe mt-3 gap-4 group rounded-xl border border-white/10 bg-zinc-9 p-3 transition hover:-translate-y-0.25 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/960px-YouTube_full-color_icon_%282017%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Linkedin Logo" width="40">
+        <h2 class=" ddtext-xl leading-6 text-zinc-400">Youtube (WIP)</h2>
+      </a>   
+    </div>
+    <div class="grid justify-center gap-5 mt-3 md:grid-cols-2">
+      <div class="flex justify-center items-center-safe mt-3 gap-4 group rounded-xl border border-white/10 bg-zinc-9 p-3" >
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" alt="Linkedin Logo" width="40">
+        <h2 class=" ddtext-xl leading-6 text-zinc-400">(910)431-0148</h2>
+      </div>
+      <div class="flex justify-center items-center-safe mt-3 gap-4 group rounded-xl border border-white/10 bg-zinc-9 p-3" >
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Gmail_icon_%282026%29.svg/3840px-Gmail_icon_%282026%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="Github Logo" width="40">
+        <h2 class=" ddtext-xl leading-6 text-zinc-400">Chris83337@gmail.com</h2>
+      </div> 
+    </div>
+    <div class="mt-10 rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
+      <p class="text-lg leading-8 text-zinc-300">
+        I'm a developer who enjoys learning by building. This site is home to my projects, experiments, and notes from the work in progress.
+      </p>
+      <p class="mt-5 leading-7 text-zinc-400">
+        Take a look through my portfolio to see what I've made, or visit the devblog for a closer look at what I'm currently working on.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/portfolio" class="rounded-md bg-emerald-400 px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-emerald-300">View portfolio</a>
+        <a href="/devblog" class="rounded-md border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-emerald-400/40 hover:bg-white/5">Read the devblog</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

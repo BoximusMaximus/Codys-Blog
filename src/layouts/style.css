@@ -1,48 +1,37 @@
-.navbar {
-    font-size: 36px;
-    font-weight: bold;
-    justify-content: center;
-    display: flex;
-    list-style-type: none;
-    margin: 20px;
-    padding: 0;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee2: marquee2 25s linear infinite;
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
 
-.navbar a:hover {
-    border: 2px whitesmoke solid;
-    border-radius: 10px;
-    color: darkseagreen;
-}
-.navbar li {
-    margin-left: 10px;
-}
-.devlog_entry{
-    border: darkgray ridge 3px;
-    border-radius: 10px;
-    background-color: darkslategray;
-    color: skyblue;
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-top: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-    justify-content: center;
-    display: block;
-    align-items: center;
-}
-.devlog_entry iframe{
-    border: black solid 10px;
-    display: block;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
-html{
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
-}
-a:link, a:visited{
-    color: green;
-    text-decoration: none;
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-screen bg-black text-zinc-200 antialiased selection:bg-emerald-400/25 selection:text-emerald-100;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-emerald-400;
+  }
 }

@@ -15,11 +15,13 @@
     "@astrojs/netlify": "^8.2.10",
     "@astrojs/react": "^5.0.1",
     "@netlify/blobs": "^11.1.6",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^7.1.6",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild@0.28.1": true
