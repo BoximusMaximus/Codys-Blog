@@ -4,7 +4,6 @@ import Navigation from "../../components/Navigation.astro";
 export const prerender = false; // Not needed in 'server' mode
 const { logId } = Astro.params;
 
-
 const entry = await getEntry("devblog", `${logId}`);
 
 if (!entry) {
@@ -14,4 +13,5 @@ if (!entry) {
 const { Content } = await render(entry);
 ---
 <Navigation/>
+
 <Content/>

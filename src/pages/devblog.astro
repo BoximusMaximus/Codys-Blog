@@ -2,6 +2,7 @@
 import '../layouts/style.css';
 import Navigation from "../components/Navigation.astro";
 import { getCollection } from 'astro:content';
+import DevblogCard from '../components/DevblogCard';
 
 
   const allBlogPosts = await getCollection("devblog")
@@ -17,7 +18,7 @@ import { getCollection } from 'astro:content';
         <div>
             <ul>
             {allBlogPosts.map(post => (
-                <li><a href={`/devblogs/${post.id}/`}>{post.data.title}{post.id}</a></li>
+                <li><DevblogCard devblogId={post.id} devblogDesc={post.data.description} devblogTitle={post.data.title} devblogDate=`${post.data.pubDate}`/></li>
             ))}
             </ul>
         </div>
