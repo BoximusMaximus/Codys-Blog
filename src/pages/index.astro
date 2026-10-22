@@ -3,25 +3,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Christaphor Box — Developer & Builder">
-  <section class="grid items-end gap-10 border-b border-white/10 pb-14 lg:grid-cols-[1fr_20rem] lg:pb-20">
+  <section class="grid items-end gap-6 border-b border-white/10 pb-10 sm:gap-10 sm:pb-14 lg:grid-cols-[1fr_20rem] lg:pb-20">
     <div>
-      <h1 class="max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+      <h1 class="max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
         Christaphor (Cody) Box
       </h1>
-      <div class="relative flex overflow-x-hidden">
-        <div class="animate-marquee py-2 whitespace-nowrap">
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Designer</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Creator</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Developer</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Artist</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Veteran</span>
+      <div class="relative flex w-full max-w-full overflow-hidden">
+        <div class="animate-marquee shrink-0 whitespace-nowrap py-2 motion-reduce:animate-none">
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Designer</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Creator</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Developer</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Artist</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Veteran</span>
         </div>
-        <div class="absolute top-0 animate-marquee2 py-2 whitespace-nowrap">
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Designer</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Creator</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Developer</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Artist</span>
-          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Veteran</span>
+        <div class="absolute top-0 shrink-0 animate-marquee2 whitespace-nowrap py-2 motion-reduce:hidden" aria-hidden="true">
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Designer</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Creator</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Developer</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Artist</span>
+          <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Veteran</span>
         </div>
       </div>
     </div>
@@ -30,26 +30,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
   </section>
 
-  <section class="py-14 lg:py-20" aria-labelledby="explore-heading">
-    <div class="mb-8">
-      <h2 id="explore-heading" class="text-4xl font-semibold tracking-tight text-white">Find out more</h2>
+  <section class="py-10 sm:py-14 lg:py-20" aria-labelledby="explore-heading">
+    <div class="mb-6 sm:mb-8">
+      <h2 id="explore-heading" class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Find out more</h2>
     </div>
-    <div class="grid gap-5 md:grid-cols-3">
-      <a href="/aboutme" class="group rounded-xl border border-white/10 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+    <div class="grid gap-4 sm:gap-5 md:grid-cols-3">
+      <a href="/aboutme" class="group rounded-xl border border-white/10 bg-zinc-950 p-5 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80 sm:p-6">
         <span class="font-mono text-2xl text-emerald-400">01</span>
-        <h3 class="mt-10 text-3xl font-semibold text-white">About me</h3>
+        <h3 class="mt-6 text-2xl font-semibold text-white sm:mt-10 sm:text-3xl">About me</h3>
         <p class="mt-3 text-sm leading-6 text-zinc-400">My contacts are available here.</p>
         <span class="mt-6 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
       </a>
-      <a href="/portfolio" class="group rounded-xl border border-white/10 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+      <a href="/portfolio" class="group rounded-xl border border-white/10 bg-zinc-950 p-5 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80 sm:p-6">
         <span class="font-mono text-2xl text-emerald-400">02</span>
-        <h3 class="mt-10 text-3xl font-semibold text-white">Portfolio</h3>
+        <h3 class="mt-6 text-2xl font-semibold text-white sm:mt-10 sm:text-3xl">Portfolio</h3>
         <p class="mt-3 text-sm leading-6 text-zinc-400">Browse my projects and apps.</p>
         <span class="mt-6 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
       </a>
-      <a href="/devblog" class="group rounded-xl border border-white/10 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+      <a href="/devblog" class="group rounded-xl border border-white/10 bg-zinc-950 p-5 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80 sm:p-6">
         <span class="font-mono text-2xl text-emerald-400">03</span>
-        <h3 class="mt-10 text-3xl font-semibold text-white">Devblog</h3>
+        <h3 class="mt-6 text-2xl font-semibold text-white sm:mt-10 sm:text-3xl">Devblog</h3>
         <p class="mt-3 text-sm leading-6 text-zinc-400">Stay up to date with me and my projects.</p>
         <span class="mt-6 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
       </a>
