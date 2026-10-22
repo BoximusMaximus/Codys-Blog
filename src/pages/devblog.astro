@@ -1,0 +1,25 @@
+---
+import '../layouts/style.css';
+import Navigation from "../components/Navigation.astro";
+import { getCollection } from 'astro:content';
+
+
+  const allBlogPosts = await getCollection("devblog")
+  console.log(allBlogPosts)
+---
+<head>
+    <meta charset="UTF-8">
+    <title>Chris's Devlog</title>
+</head>
+<body>
+    <div>
+        <Navigation />
+        <div>
+            <ul>
+            {allBlogPosts.map(post => (
+                <li><a href={`/devblogs/${post.id}/`}>{post.data.title}{post.id}</a></li>
+            ))}
+            </ul>
+        </div>
+    </div>
+</body>
