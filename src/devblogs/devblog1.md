@@ -10,7 +10,9 @@ my main device to work from) and installed "live-server"
 addon. This fixed an issue I encountered with Webstorm
 incorrectly hosting my webpage which led to a 404 error
 when accessing my navbar. live-server allows me to work
-on my website without issue. I am also adding my first
+on my website without issue. 
+
+I am also adding my first
 entry to my devlog (hello). Hopefully this will be the
 first of many. Later this week, my SSD should be here so
 I can boot and use my server FINALLY! My wife is unaware

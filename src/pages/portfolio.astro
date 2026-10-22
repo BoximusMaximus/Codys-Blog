@@ -1,22 +1,58 @@
 ---
-import '../layouts/style.css';
-import Navigation from "../components/Navigation.astro";
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<head>
-    <meta charset="UTF-8">
-    <title>Chris's Portfolio</title>
 
-</head>
-<body>
-
-<Navigation />
-
-<hr>
-
-<div>
-    <p>This is my portfolio!</p>
-
-    <p>Feel free to look over my Github! <a href="https://github.com/BoximusMaximus?tab=repositories" target="_blank">Github</a></p>
-</div>
-</body>
+<BaseLayout title="Portfolio — Christaphor Box" description="Projects and software built by Christaphor Box.">
+  <section>
+    <div class="max-w-3xl">
+      <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl">Projects built by the one and only.</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">A growing collection of full-stack apps, creative works, and whatever comes next.</p>
+    </div>
+    <div class="mt-12 grid gap-4 md:grid-cols-2">
+      <!-- This website -->
+      <article class="rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4">
+          <span class="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1 font-mono text-xs text-emerald-300">This website</span>
+        </div>
+        <h2 class="mt-5 text-2xl font-semibold text-white">Personal portfolio</h2>
+        <p class="mt-3 leading-7 text-zinc-400">A home for my work and development notes, built with Astro, React, and Tailwind CSS.</p>
+        <a href="https://github.com/BoximusMaximus/PortfolioWebsite" target="blank" rel="noreferrer" class="mt-12 inline-block text-sm font-medium text-zinc-300 transition hover:text-emerald-300">View repository <span aria-hidden="true"> -> </span></a>
+      </article>
+      <!-- TripSync -->
+      <article class="rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
+        <h2 class="mt-10 text-2xl font-semibold text-white">TripSync</h2>
+        <p class="mt-3 leading-7 text-zinc-400">Group project made during my time in CodePlatoon. Plan your vacations and manage your budget, then invite your friends to sync the schedule.</p>
+        <a href="https://github.com/BoximusMaximus/TripSync" target="blank" rel="noreferrer" class="mt-7 inline-block text-sm font-medium text-zinc-300 transition hover:text-emerald-300">View repository <span aria-hidden="true"> -> </span></a>
+      </article>
+      <!-- Calorie Crusher -->
+      <article class="rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
+        <h2 class="mt-10 text-2xl font-semibold text-white">Calorie Crusher</h2>
+        <p class="mt-3 leading-7 text-zinc-400">Personal project for CodePlatoon. Manage your eating habits and discover recipies to crush your calories.</p>
+        <a href="https://github.com/BoximusMaximus/CalorieCrusher" target="blank" rel="noreferrer" class="mt-7 inline-block text-sm font-medium text-zinc-300 transition hover:text-emerald-300">View repository <span aria-hidden="true"> -> </span></a>
+      </article>
+      <!-- DataDragon -->
+      <article class="rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4">
+          <span class="rounded-full border border-amber-400/30 bg-amber-400/10 text-amber-300 px-3 py-1 font-mono text-xs">In Progress</span>
+        </div>
+        <h2 class="mt-5 text-2xl font-semibold text-white">DataDragon</h2>
+        <p class="mt-3 leading-7 text-zinc-400">A planner and repository for tabletop RPG gamemasters to create their stories.</p>
+        <!-- <a href="https://github.com/BoximusMaximus/PortfolioWebsite" target="blank" rel="noreferrer" class="mt-7 inline-block text-sm font-medium text-zinc-300 transition hover:text-emerald-300">View repository <span aria-hidden="true"> -> </span></a> -->
+         <p class="mt-7 inline-block text-sm font-medium text-zinc-300/40">Project not yet public.</p>
+      </article>
+      <!-- Golang API -->
+      <article class="rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
+        <h2 class="mt-10 text-2xl font-semibold text-white">Golang API</h2>
+        <p class="mt-3 leading-7 text-zinc-400">A fun way to learn backend development. I am building an API in Go using PostgreSQL drivers.</p>
+        <a href="https://github.com/BoximusMaximus/GoCustomAPI" target="blank" rel="noreferrer" class="mt-7 inline-block text-sm font-medium text-zinc-300 transition hover:text-emerald-300">View repository <span aria-hidden="true"> -> </span></a>
+      </article>
+      <a href="https://github.com/BoximusMaximus?tab=repositories" target="_blank" rel="noreferrer" class="group flex min-h-64 flex-col justify-between rounded-xl border border-dashed border-white/15 p-6 transition hover:border-emerald-400/40 hover:bg-emerald-400/5 sm:p-8">
+        <span class="font-mono text-xs uppercase tracking-widest text-zinc-500">More on GitHub</span>
+        <div>
+          <h2 class="text-2xl font-semibold text-white">Browse all repositories</h2>
+          <span class="mt-4 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
+        </div>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

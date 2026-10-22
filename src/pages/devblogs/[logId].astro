@@ -1,18 +1,61 @@
 ---
 import { getEntry, render } from "astro:content";
-import Navigation from "../../components/Navigation.astro";
-export const prerender = false; // Not needed in 'server' mode
-const { logId } = Astro.params;
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
+export const prerender = false;
+const { logId } = Astro.params;
 const entry = await getEntry("devblog", `${logId}`);
 
 if (!entry) {
-  throw new Error("Entry not found");
+  return Astro.redirect("/404");
 }
 
 const { Content } = await render(entry);
 ---
-<meta charset="UTF-8">
-<Navigation/>
 
-<Content/>
+<BaseLayout title={`${entry.data.title} — Christaphor Box`} description={entry.data.description}>
+  <article class="mx-auto max-w-3xl">
+    <div class="flex items-center justify-between gap-4">
+      <a href="/devblog" class="text-sm font-medium text-zinc-400 transition hover:text-emerald-300"><span aria-hidden="true">←</span> Back to devblog</a>
+      <button
+        id="copy-link"
+        type="button"
+        class="cursor-pointer inline-flex items-center gap-2 rounded-md border border-white/15 px-3 py-2 text-sm font-medium text-zinc-300 transition hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-300"
+        aria-live="polite"
+      >
+      <img src="/src/assets/link-7-32.ico" alt="Link Logo" width="20">
+      <span>Copy link</span>
+      </button>
+    </div>
+    <header class="mt-10 border-b border-white/10 pb-10">
+      <time class="font-mono text-sm uppercase tracking-[0.2em] text-emerald-400">{entry.data.pubDate}</time>
+      <h1 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-6xl">{entry.data.title}</h1>
+      <p class="mt-5 text-lg leading-8 text-zinc-400">{entry.data.description}</p>
+    </header>
+    <div class="mt-10 text-base leading-8 text-zinc-300 [&_a]:text-emerald-400 [&_a]:underline [&_a]:decoration-emerald-400/30 [&_a]:underline-offset-4 [&_h2]:mb-4 [&_h2]:mt-10 [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-white [&_iframe]:mt-8 [&_iframe]:aspect-video [&_iframe]:h-auto [&_iframe]:w-full [&_iframe]:rounded-xl [&_iframe]:border [&_iframe]:border-white/10 [&_p+p]:mt-5">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<script>
+  const copyButton = document.querySelector<HTMLButtonElement>("#copy-link");
+  const copyLabel = copyButton?.querySelector("span");
+  let resetTimer: ReturnType<typeof setTimeout> | undefined;
+
+  copyButton?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      if (copyLabel) copyLabel.textContent = "Link copied";
+      copyButton.classList.add("border-emerald-400/40", "text-emerald-300");
+
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        if (copyLabel) copyLabel.textContent = "Copy link";
+        copyButton.classList.remove("border-emerald-400/40", "text-emerald-300");
+      }, 2000);
+    } catch {
+      if (copyLabel) copyLabel.textContent = "Unable to copy";
+    }
+  });
+</script>

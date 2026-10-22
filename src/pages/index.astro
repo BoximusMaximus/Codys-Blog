@@ -1,29 +1,58 @@
 ---
-import '../layouts/style.css';
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<head>
-	<meta charset="UTF-8">
-	<title>Chris's Website</title>
 
-	</head>
-	<body>
+<BaseLayout title="Christaphor Box — Developer & Builder">
+  <section class="grid items-end gap-10 border-b border-white/10 pb-14 lg:grid-cols-[1fr_20rem] lg:pb-20">
+    <div>
+      <h1 class="max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+        Christaphor (Cody) Box
+      </h1>
+      <div class="relative flex overflow-x-hidden">
+        <div class="animate-marquee py-2 whitespace-nowrap">
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Designer</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Creator</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Developer</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Artist</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Veteran</span>
+        </div>
+        <div class="absolute top-0 animate-marquee2 py-2 whitespace-nowrap">
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Designer</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Creator</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Developer</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Artist</span>
+          <span class="mx-8 mb-5 font-mono text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">Veteran</span>
+        </div>
+      </div>
+    </div>
+    <p class="max-w-xl text-base leading-7 text-zinc-400 lg:pb-2">
+      Welcome! This is where I share the projects I'm working on, lessons I'm learning, and progress I make along the way. I hope you find something useful!
+    </p>
+  </section>
 
-	<Navigation />
-		<hr>
-		<div>
-			<h2>Welcome to my personal blog!</h2>
-		</div>
-		<div>
-			<p>If we haven't met, then id like to introduce myself.
-				My name is Christaphor Box (yes that's how its spelled.)
-				and you can see more about me <a href="/aboutme">here.</a>
-				If you would like to see some of my work, be sure to
-				check out my <a href="/portfolio">portfolio!</a> If you're
-				interested in projects im currently working on, be sure to check
-				out my <a href="/devlog">devlog!</a>
-			</p>
-		</div>
-	<Footer />
-	</body>
+  <section class="py-14 lg:py-20" aria-labelledby="explore-heading">
+    <div class="mb-8">
+      <h2 id="explore-heading" class="text-4xl font-semibold tracking-tight text-white">Find out more</h2>
+    </div>
+    <div class="grid gap-5 md:grid-cols-3">
+      <a href="/aboutme" class="group rounded-xl border border-white/10 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+        <span class="font-mono text-2xl text-emerald-400">01</span>
+        <h3 class="mt-10 text-3xl font-semibold text-white">About me</h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">My contacts are available here.</p>
+        <span class="mt-6 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
+      </a>
+      <a href="/portfolio" class="group rounded-xl border border-white/10 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+        <span class="font-mono text-2xl text-emerald-400">02</span>
+        <h3 class="mt-10 text-3xl font-semibold text-white">Portfolio</h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">Browse my projects and apps.</p>
+        <span class="mt-6 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
+      </a>
+      <a href="/devblog" class="group rounded-xl border border-white/10 bg-zinc-950 p-6 transition hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-zinc-900/80">
+        <span class="font-mono text-2xl text-emerald-400">03</span>
+        <h3 class="mt-10 text-3xl font-semibold text-white">Devblog</h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">Stay up to date with me and my projects.</p>
+        <span class="mt-6 block text-zinc-500 transition group-hover:translate-x-1 group-hover:text-emerald-300" aria-hidden="true"> -> </span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,9 +1,38 @@
 ---
-import "../layouts/style.css";
+const pathname = Astro.url.pathname;
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/aboutme", label: "About" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/devblog", label: "Devblog" }
+];
 ---
-<ul class="navbar">
-    <li><a href="/">Home</a></li>
-    <li><a href="/aboutme">About Me</a></li>
-    <li><a href="/portfolio">Portfolio</a></li>
-    <li><a href="/devblog">Devblog</a></li>
-</ul>
+
+<header class="border-b border-white/10">
+  <nav class="flex min-h-20 flex-col justify-center gap-4 py-4 sm:flex-row sm:items-center sm:justify-between" aria-label="Primary navigation">
+    <a href="/" class="group flex w-fit items-center gap-3 text-sm font-semibold tracking-wide text-white">
+      <span class="flex size-9 items-center justify-center rounded-lg border border-emerald-400/40 bg-emerald-400/10 font-mono text-emerald-400 transition group-hover:bg-emerald-400/15">CB</span>
+      <span>Christaphor Box</span>
+    </a>
+
+    <ul class="flex flex-wrap items-center gap-1 text-sm text-zinc-400">
+      {links.map((link) => {
+        const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+        return (
+          <li>
+            <a
+              href={link.href}
+              aria-current={isActive ? "page" : undefined}
+              class:list={[
+                "block rounded-md px-3 py-2 transition hover:bg-white/5 hover:text-white",
+                isActive && "bg-emerald-400/10 text-emerald-300"
+              ]}
+            >
+              {link.label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+</header>

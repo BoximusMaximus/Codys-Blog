@@ -1,26 +1,30 @@
 ---
-import '../layouts/style.css';
-import Navigation from "../components/Navigation.astro";
-import { getCollection } from 'astro:content';
-import DevblogCard from '../components/DevblogCard';
+import { getCollection } from "astro:content";
+import DevblogCard from "../components/DevblogCard";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-
-  const allBlogPosts = await getCollection("devblog")
-  console.log(allBlogPosts)
+const allBlogPosts = (await getCollection("devblog")).sort(
+  (a, b) => new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+);
 ---
-<head>
-    <meta charset="UTF-8">
-    <title>Chris's Devlog</title>
-</head>
-<body>
-    <div>
-        <Navigation />
-        <div>
-            <ul>
-            {allBlogPosts.map(post => (
-                <li><DevblogCard devblogId={post.id} devblogDesc={post.data.description} devblogTitle={post.data.title} devblogDate=`${post.data.pubDate}`/></li>
-            ))}
-            </ul>
-        </div>
+
+<BaseLayout title="Devblog — Christaphor Box" description="Development notes, project updates, and lessons learned by Christaphor Box.">
+  <section>
+    <div class="max-w-3xl">
+      <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl">My personal blog</h1>
+      <p class="mt-6 text-lg leading-8 text-zinc-400">My incoherent ramblings live here.</p>
     </div>
-</body>
+    <ul class="mt-12 grid gap-4 sm:grid-cols-2">
+      {allBlogPosts.map((post) => (
+        <li class="relative">
+          <DevblogCard
+            devblogId={post.id}
+            devblogDesc={post.data.description}
+            devblogTitle={post.data.title}
+            devblogDate={post.data.pubDate}
+          />
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
