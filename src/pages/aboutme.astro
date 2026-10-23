@@ -37,11 +37,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
     <div class="mt-10 rounded-xl border border-white/10 bg-zinc-950 p-6 sm:p-8">
       <p class="text-lg leading-8 text-zinc-300">
-        I'm a developer who enjoys learning by building. This site is home to my projects, experiments, and notes from the work in progress.
+        I am a systems administrator by trade and a developer by choice. I enjoy creating full-stack
+        applications and coding video games in Unity. I use my home server sled as sandbox to
+        test and develop my apps. I also use it to host game servers for players online. Feel free
+        to contact me about my experience in specific fields.
       </p>
-      <p class="mt-5 leading-7 text-zinc-400">
-        Take a look through my portfolio to see what I've made, or visit the devblog for a closer look at what I'm currently working on.
-      </p>
+      <section class="mt-8 border-t border-white/10 pt-8" aria-labelledby="skills-heading">
+        <h2 id="skills-heading" class="text-2xl font-semibold tracking-tight text-white">Tools I work with</h2>
+
+        <!-- Add or remove individual skills here. -->
+        <ul class="mt-4 grid gap-2 text-sm text-zinc-300 sm:grid-cols-4">
+          <li class="rounded-md border border-white/10 px-3 py-2">Python</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Django</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">JavaScript</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">TypeScript</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">React</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Astro</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Go</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Bash</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">PostgreSQL</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Git / GitHub</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Proxmox</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">VMware vSphere</li>
+          <li class="rounded-md border border-white/10 px-3 py-2">Docker</li>
+          <li class="rounded-md border border-white/10 px-3 py-2 text-zinc-300/40">More coming...</li>
+        </ul>
+      </section>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/portfolio" class="rounded-md bg-emerald-400 px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-emerald-300">View portfolio</a>
         <a href="/devblog" class="rounded-md border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-emerald-400/40 hover:bg-white/5">Read the devblog</a>
