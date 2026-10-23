@@ -3,12 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Christaphor Box — Developer & Builder">
-  <section class="grid items-end gap-6 border-b border-white/10 pb-10 sm:gap-10 sm:pb-14 lg:grid-cols-[1fr_20rem] lg:pb-20">
-    <div>
+  <section class="grid min-w-0 max-w-full grid-cols-[minmax(0,1fr)] items-end gap-6 border-b border-white/10 pb-10 sm:gap-10 sm:pb-14 lg:grid-cols-[minmax(0,1fr)_20rem] lg:pb-20">
+    <div class="min-w-0">
       <h1 class="max-w-4xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
         Christaphor (Cody) Box
       </h1>
-      <div class="relative flex w-full max-w-full overflow-hidden">
+      <div class="relative flex min-w-0 w-full max-w-full overflow-hidden">
         <div class="animate-marquee shrink-0 whitespace-nowrap py-2 motion-reduce:animate-none">
           <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Designer</span>
           <span class="mx-4 mb-5 font-mono text-xs font-medium uppercase tracking-[0.2em] text-emerald-400 sm:mx-8 sm:text-sm">Creator</span>
