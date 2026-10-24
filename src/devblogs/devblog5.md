@@ -6,7 +6,7 @@ pubDate: "22 Oct 2026"
 I have been afraid. Afraid of what comes after my military career. Afraid of leaving behind all
 my friends. Afraid I won't be able to find a well paying job to support my family. Afraid I didn't
 use my time in the military wisely, like there was something better I should have been doing.
-I've even been afraid to put this website up because of my power to my server. Well guess what. The 
+I've even been afraid to put this website up because my server keeps losing power. Well guess what. The 
 website is up. All the other things I was afraid of? Let me walk you through my fears and self-doubt, 
 so I can show you what I learned from it all. 
 

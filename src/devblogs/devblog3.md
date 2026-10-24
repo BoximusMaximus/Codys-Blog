@@ -1,5 +1,5 @@
 ---
-title: "The great shift"
+title: "The Great Shift"
 description: "Changing everything about this website"
 pubDate: "18 March 2026"
 ---
