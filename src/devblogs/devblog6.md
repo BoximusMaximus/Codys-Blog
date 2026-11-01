@@ -27,7 +27,7 @@ It's no secret that the best way to get good at something, is by doing that thin
 started building my own game.
 
 ## Stunning 10/10 Gameplay
-![Video Game Footage](PlayerTest.gif)
+![Video Game Footage](/src/devblogs/PlayerTest.gif)
 
 The idea for the game is a 2.5D choice-based puzzle game about a robot (I know that's not a robot
 in the demo) who must learn and understand human emotions. The game is in its infancy and I'm very 
